@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link href="/css/admin_add.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"    src="/js/jquery-1.2.6.js"></script>
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script> 
+</head>
+<body>
+<script>
+        function checkForm(){
+			if( '-1' == $.trim($('#typeid').val())){
+                alert('请选择产品类别');
+                return false;
+            }
+			if( '' == $.trim($('#name').val())){
+                alert('产品名称不能为空');
+                return false;
+            }
+			if( '' == $.trim($('#typename').val())){
+                alert('产品型号不能为空');
+                return false;
+            }
+            if( '' == $.trim($('#image').val())){
+                alert('产品主图不能为空');
+                return false;
+            }
+            //可以在此添加其它判断
+        }
+		function gettype2(){
+			var typeid = $('#typeid').val();
+			var str = "/index.php/admin/?m=products&a=loadnext&typeid="+typeid;
+			$("#showtypeid2").load(str);
+		}
+</script>
+    <p>这里是<span style="color:#F00">添加新产品</span> <a href="/index.php/admin/?m=products&a=index" target="mainFrame"'>返回列表</a></p>
+	<p></p>
+	<center>
+	<form action='/index.php/admin/?m=products&a=doaddproduct' method='post' onsubmit='return checkForm()' enctype="multipart/form-data" id="form1">
+		<table width="80%" border="0" cellspacing="0" cellpadding="0" class="tableborder">
+			<tr>
+			<td colspan=2><center>添加新产品</td>
+		  </tr>
+		  <tr>
+			<td>产品类别:</td>
+			<td><select id='typeid' name='typeid' onchange='gettype2()'>
+				<option value='-1' selected>请选择产品类别</option>
+				<foreach name='typelist' item='list'>
+					<option value='{$list.id}' >{$list.title}</option>
+				</foreach>
+				</select>
+				<div id='showtypeid2'></div></td>
+		  </tr>
+		  <tr>
+			<td>产品名称:</td>
+			<td><input type='text' id='name' name='name' width=200 >*</td>
+		  </tr>
+		  <tr>
+			<td>产品型号:</td>
+			<td><input type='text' id='typename' name='typename' width=200 >*</td>
+		  </tr>
+		  <tr>
+			<td>产品介绍:</td>
+			<td><textarea id='msg' name='msg' rows=10 cols=80></textarea><script type="text/javascript">var editor = CKEDITOR.replace( 'msg',{language:'zh-cn'});</script></td>
+		  </tr>
+		
+		  <tr>
+			<td>主图:</td>
+			<td><input type='file' name='image' id='image'> 建议图片大小 (800 X 800)</td>
+		  </tr>
+		  <tr>
+			<td colspan=2><center><input type='submit' value='保存'></td>
+		  </tr>
+		</table>
+	</form>
+	<p><span style="color:#F00">{$result}</span></p>
+</body>
+</html>

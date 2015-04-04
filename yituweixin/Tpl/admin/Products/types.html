@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>首页轮播图</title>
+<link href="/css/admin_add.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"    src="/js/jquery-1.2.6.js"></script>
+</head>
+
+<body>
+    <p>这里是<span style="color:#F00">分类管理</span> </p>
+	<center>
+	<p><a href='/index.php/admin/?m=products&a=addtype'>添加分类</a> </p>
+	<center>
+			<table width=500 border=1>
+				<tr>
+					<th bgcolor="#9A9A9A">一级分类</th><th bgcolor="#9A9A9A">二级分类</th>
+				</tr>
+				<volist  name='cptype' id='cptype'>
+				<tr>
+				<td width="50%"><a href="/index.php/admin/?m=products&a=updatetype&id={$cptype.id}" >{$cptype.title}</a></td>
+				<td  width="50%">
+				<table  width="100%" border=1>
+				  <volist  name="cptype['nextlist']" id='list'>
+					 <tr><td><a href="/index.php/admin/?m=products&a=updatetype&id={$list.id}" >{$list.title}</a></td></tr>
+				  </volist>
+				</table>
+				</td>
+				
+				</tr>
+				</volist >
+			</table>
+			
+</body>
+</html>

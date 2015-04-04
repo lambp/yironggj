@@ -1,0 +1,46 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理-登录</title>
+<link href="/css/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery-1.2.6.js"></script>
+
+</head>
+
+<body style="background:#fff;">
+
+<div id="login_index">
+<form action="/?m=admin&a=dologin" method="post">
+	<table width="300" style="margin-top:40px;" class="fr">
+  <tr>
+    <td width="75" height="32" align="right">用户名：</td>
+    <td width="213"><input type="text" class="txt_01" style="width:200px" name="username" /></td>
+  </tr>
+  <tr>
+    <td height="32" align="right">密码：</td>
+    <td><input type="password" class="txt_01" style="width:200px" name="password" /></td>
+  </tr>
+  <!--tr>
+    <td height="32" align="right" valign="top">验证码：</td>
+    <td><input type="text" class="txt_01" style="width:50px" name="cap_code" />
+    	<img src="/index.php/admin/?a=verify" id="verifyImg" onclick="fleshVerify()"/>
+        <a href="javascript:void(0)" onclick="fleshVerify()">看不清?换一张</a>
+    </td>
+  </tr-->
+  <tr>
+    <td height="60" align="right" valign="top">&nbsp;</td>
+    <td><input type="submit" class="btn_login" value=" " /></td>
+  </tr>
+</table>
+</form>
+</div>
+
+</body>
+<script language="javascript">
+function fleshVerify(){
+			var timenow = new Date().getTime();
+			$('#verifyImg').attr('src','/index.php/admin/?m=index&a=verify&t='+timenow);
+		}
+</script>
+</html>

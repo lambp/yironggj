@@ -1,0 +1,134 @@
+/* CSS Document */
+body{ text-align:left;background:url(/images/bg.png) repeat;}
+
+/* ======================================== CSS index ======================================== */
+ 
+/* ===== CSS header ===== */
+.top {
+    background-color: #F8710F;
+    height: 25px;
+    line-height: 25px;
+    width: 100%;
+}
+.top dl {
+    color: #FFFFFF;
+    height: 25px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1000px;
+}
+.top dl dt {
+    float: left;
+    width: 700px;
+}
+
+.headerbody{
+	width:100%;
+	height:136px;
+	background:url(/images/topbg.gif) repeat-x;
+	margin:0 auto;
+}
+.header{ width:1000px;margin:0 auto; overflow:auto;zoom:1;}
+
+.logo{ width:368px; height:129px;float:left;}
+
+.righttop{width:600px;height:136px;float:right;}
+.righttop ul{width:100%;margin-top:70px; }
+.righttop dd{     float:left; 
+				  padding-left:28px;
+				  font-size:14px; 
+				  line-height:38px;
+				  letter-spacing:4px;font-weight:10px; }
+
+.righttop dd a:hover{ color:#434343;}
+
+/* ===== CSS banner ===== */
+.banner{ 
+		  
+		  height:388px; 
+		  margin:0 auto;  
+}
+.bann{ width:1290px; height:388px;margin:0 auto;}
+
+/* ===== CSS main ===== */
+.main{ width:990px; margin:0 auto;text-align:left; margin-top:8px; overflow:hidden;}
+
+/* ===== CSS left ===== */
+.index_left{ width:325px;height:287px;background:url(/images/left.png);float:left;}
+.index_left .spanaddr{width:220px;height:60px;margin-top:60px;margin-left:90px;float:left;font-size:16px;}
+.index_left .spanlist{width:220px;height:70px;margin-top:10px;margin-left:90px;float:left;font-size:16px;}
+.index_right{ width:665px;height:287px;background:url(/images/right.png);float:right;}
+.index_mid{ width:990px;height:426px;background:url(/images/mid.png) no-repeat;float:left;padding-top:20px;padding-left:5px;}
+
+/* ===== CSS footer ===== */
+.footer{
+		  background:url(/images/footer.jpg) repeat-x;
+		  height:93px;
+		  line-height:93px; 
+		  margin:0 auto; 
+		  color:#ff6c00;
+		  text-align:center;
+}
+
+/*********
+
+首页滚动图片
+
+**********/
+.rollBox{width:980px;overflow:hidden;padding:12px 0 5px 6px;margin:0 auto;}
+.rollBox .LeftBotton{height:52px;width:19px;background:url(/images/button.gif) no-repeat 11px 0;overflow:hidden;float:left;display:inline;margin:25px 0 0 0;cursor:pointer;}
+.rollBox .RightBotton{height:52px;width:20px;background:url(/images/button.gif) no-repeat -8px 0;overflow:hidden;float:left;display:inline;margin:25px 0 0 0;cursor:pointer;}
+.rollBox .Cont{width:930px;overflow:hidden;float:left;}
+.rollBox .ScrCont{width:10000000px;}
+.rollBox .Cont .pic{width:238px;float:left;text-align:center;}
+.rollBox .Cont .pic img{padding:4px;background:#fff;border:1px solid #ccc;display:block;margin:0 auto;}
+.rollBox .Cont .pic p{line-height:26px;color:#505050;}
+.rollBox .Cont a:link,.rollBox .Cont a:visited{color:#626466;text-decoration:none;}
+.rollBox .Cont a:hover{color:#f00;text-decoration:underline;}
+.rollBox #List1,.rollBox #List2{float:left;}
+
+/********
+
+公用部分
+
+*********/
+.main{width:1000px;margin:0 auto; overflow:auto;zoom:1;}
+.left{ width:262px;float:left;}
+
+.zhanshi{ background:url(/images/nei_bottom.jpg) no-repeat left bottom; padding-bottom:25px; width:262px;margin-bottom:2px;}
+.zhanshi p{
+			background:url(/images/nei_top.jpg) no-repeat left; 
+			color:#FFF;
+			font-size:18px;
+			height:65px;
+			line-height:65px;
+			 padding-left:30px;
+}
+.zhanshi1{ background:url(/images/nei_main.jpg) repeat-y;}
+.zhanshi1 ul{ width:200px; margin-left:40px;}
+.zhanshi1 li{ 
+				background:url(/images/jiantou.gif) no-repeat left center; 
+				padding-left:15px; 
+				line-height:25px; 
+				width:170px;
+				white-space:nowrap; 
+				text-overflow:ellipsis; 
+				-o-text-overflow:ellipsis; 
+				overflow: hidden;
+}
+.zhanshi1 li a:hover{ color:#1e9d60;}
+
+/*  CSS lianxi */
+.lianxi{ background:url(/images/lianxi.jpg) no-repeat; width:262px; height:212px; padding:1px;}
+.lianxi1{ width:220px; height:130px;margin:0 auto; margin-top:35px;}
+.lianxi1 p{ line-height:20px;}
+
+.right{ float:right; width:694px; background:url(/images/conter_bottom.jpg) no-repeat left bottom; padding-bottom:16px;}
+.rtop{ background:url(/images/conter_top.jpg) no-repeat left; height:17px;}
+.riconter{ 
+		background:url(/images/conter_main.jpg) repeat-y left; 
+		height:auto!important;
+		height:auto;
+		min-height:450px;
+		padding:0 10px;
+}

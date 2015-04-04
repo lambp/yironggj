@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - cmsdb@localhost" uuid="34ae76b2-740f-4e0e-9619-8b34b2919ee7">
+    <database-info product="MySQL" version="5.6.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="cmsdb"/>
+    <table name="detail_info" schema="" catalog="cmsdb" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="detail_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5a+55bqU6ZO+5o6laWQ="/>
+      <column name="title" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12" remarks="5paH56ug5qCH6aKY"/>
+      <column name="message" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="5paH56ug5YaF5a65"/>
+      <column name="images_urls" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="5Zu+54mH5Zyw5Z2A"/>
+      <column name="images_name" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="5Zu+54mH5ZCN56ew"/>
+      <column name="images_dir" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12" remarks="5Zu+54mH5L+d5a2Y6Lev5b6E"/>
+      <column name="static" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA==" remarks="5oqT5Y+W54q25oCBMOacquW8gOWniw=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="detail_url" schema="" catalog="cmsdb" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="index_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5LiK57qn55uu5b2V"/>
+      <column name="title" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="static" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA==" remarks="5oqT5Y+W54q25oCBMOacquW8gOWniw=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="index_url" schema="" catalog="cmsdb" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="menu_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="dirname" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="55uu5b2V5ZCN56ew"/>
+      <column name="pre_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5LiK57qn55uu5b2V"/>
+      <column name="url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12" remarks="572R5Z2A"/>
+      <column name="static" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA==" remarks="5oqT5Y+W54q25oCBMOacquW8gOWniw=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="menulist" schema="" catalog="cmsdb" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="text" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>

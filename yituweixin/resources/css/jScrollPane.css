@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+.jScrollPaneContainer {
+	Z-INDEX: 1; POSITION: relative; OVERFLOW: hidden;
+}
+.jScrollPaneTrack {
+	POSITION: absolute; HEIGHT: 100%; TOP: 0px; CURSOR: pointer; RIGHT: 0px;
+}
+.jScrollPaneDrag {
+	POSITION: absolute; OVERFLOW: hidden; CURSOR: pointer;
+}
+.jScrollPaneDragTop {
+	POSITION: absolute; OVERFLOW: hidden; TOP: 0px; LEFT: 0px;
+}
+.jScrollPaneDragBottom {
+	POSITION: absolute; BOTTOM: 0px; OVERFLOW: hidden; LEFT: 0px;
+}
+A.jScrollArrowUp {
+	Z-INDEX: 1; POSITION: absolute; TEXT-INDENT: -2000px; DISPLAY: block; HEIGHT: 9px; OVERFLOW: hidden; TOP: 0px; RIGHT: 0px;
+}
+A.jScrollArrowUp:hover {
+	
+}
+A.jScrollArrowDown {
+	Z-INDEX: 1; POSITION: absolute; TEXT-INDENT: -2000px; BOTTOM: 0px; DISPLAY: block; HEIGHT: 9px; OVERFLOW: hidden; RIGHT: 0px;
+}
+A.jScrollArrowDown:hover {
+	
+}
+A.jScrollActiveArrowButton {
+	
+}
+A.jScrollActiveArrowButton:hover {
+	
+}

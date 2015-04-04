@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link href="/css/admin_add.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"    src="/js/jquery-1.2.6.js"></script>
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script> 
+</head>
+<body>
+<script>
+        function checkForm(){
+			if( '-1' == $.trim($('#typeid').val())){
+                alert('请选择产品类别');
+                return false;
+            }
+			if( '' == $.trim($('#name').val())){
+                alert('产品名称不能为空');
+                return false;
+            }
+			if( '' == $.trim($('#typename').val())){
+                alert('产品型号不能为空');
+                return false;
+            }
+			if( '' == $.trim($('#msg').val())){
+                alert('产品介绍不能为空');
+                return false;
+            }
+
+            //可以在此添加其它判断
+        }
+		function gettype2(){
+			var typeid = $('#typeid').val();
+			var str = "/index.php/admin/?m=products&a=loadnext&typeid="+typeid;
+			$("#showtypeid2").load(str);
+		}
+</script>
+    <p>这里是<span style="color:#F00">修改产品</span> <a href="/index.php/admin/?m=products&a=index" target="mainFrame"'>返回列表</a></p>
+	<p></p>
+	<center>
+	<form action='/index.php/admin/?m=products&a=doupdateproduct' method='post' onsubmit='return checkForm()' enctype="multipart/form-data" id="form1">
+		<table width="80%" border="0" cellspacing="0" cellpadding="0" class="tableborder">
+			<tr>
+			<td colspan=2><center>修改产品<input type='hidden' value='{$product[id]}' name='id'></td>
+		  </tr>
+		  <tr>
+			<td>产品类别:<php>echo $product['typeid'];</php></td>
+			<td><select id='typeid' name='typeid' onchange='gettype2()'>
+					<php>
+					 foreach($typelist as $list){
+						 if($product['typeid'] == $list['id']){
+							echo "<option value='$list[id]'   selected>$list[title]</option>";
+						 }else{
+							echo "<option value='$list[id]'  >$list[title]</option>";
+						 }
+					 }
+					</php>
+				</select>
+				<div id='showtypeid2'>
+					<php>
+					if($secondid>0){
+					</php>
+					二级分类<select id='typeid2' name='typeid2' >
+					<php>
+					 foreach($secondlist as $list){
+						 if($secondid == $list['id']){
+							echo "<option value='$list[id]'   selected>$list[title]</option>";
+						 }else{
+							echo "<option value='$list[id]'  >$list[title]</option>";
+						 }
+					 }
+					</php>
+					</select>
+					<php>
+					}
+					</php>
+				</div></td>
+		  </tr>
+		  <tr>
+			<td>产品名称:</td>
+			<td><input type='text' id='name' name='name' value='{$product.title}' width=200 >*</td>
+		  </tr>
+		  <tr>
+			<td>产品型号:</td>
+			<td><input type='text' id='typename' value='{$product.typename}' name='typename' width=200 >*</td>
+		  </tr>
+		  <tr>
+			<td>产品介绍:</td>
+			<td><textarea id='msg' name='msg'  rows=10 cols=80>{$product.msg}</textarea><script type="text/javascript">var editor = CKEDITOR.replace( 'msg',{language:'zh-cn'});</script></td>
+		  </tr>
+		
+		  <tr>
+			<td>更新图片:</td>
+			<td><input type='file' name='image' id='image'> 建议图片大小 (600 X 480)</td>
+		  </tr>
+		  <tr>
+			<td colspan=2><center><input type='submit' value='保存'></td>
+		  </tr>
+		</table>
+	</form>
+	<p><span style="color:#F00">{$result}</span></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+@charset "utf-8";
+#login_index{width:478px;height:259px;color:#734c35;margin:200px auto; padding:25px;background:url(/images/admin/login_bg.jpg)}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, hr {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #000000;
+    font: 14px/1.6em "微软雅黑",Arial,Tahoma,Helvetica,STHeiti;
+    word-wrap: break-word;
+}
+
+element.style {
+    margin-top: 40px;
+}
+.fr {
+    float: right;
+}
+.btn_login, .btn_use, .btn_search, .btn_qd, .btn_qx {
+    background: url("/images/admin/btn_login.gif") repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    height: 32px;
+    width: 88px;
+}
+textarea, select, input, img {
+    font-size: 100%;
+    vertical-align: middle;
+}
+.txt_01 {
+    border: 1px solid #D5D5D5;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 5px;
+}

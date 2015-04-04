@@ -1,0 +1,16 @@
+@charset "utf-8";
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li,pre,
+form, fieldset, legend, button, input, textarea,th, td,img{ border:medium none;    margin: 0;    padding: 0;  }  
+/** 设置默认字体 **/ 
+body,button, input, select, textarea {  
+  font: 12px/1.5 "微软雅黑"; 
+}  
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }  
+em{font-style:normal;}  
+ul, ol { list-style: none; }  
+a { text-decoration: none; color:#000;}  
+a:hover{color:#1e9d60;}
+img{ border:0px;}  
+table { border-collapse: collapse; border-spacing: 0; } 
+
+#login_index{width:478px;height:259px;color:#734c35;margin:200px auto; padding:25px;background:url(/images/admin/login_bg.jpg)}

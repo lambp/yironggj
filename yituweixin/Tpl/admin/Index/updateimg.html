@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>首页轮播图</title>
+<link href="/css/admin_add.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"    src="/js/jquery-1.2.6.js"></script>
+</head>
+
+<body>
+
+    <p>这里是<span style="color:#F00">添加新轮播图</span> <a href="/index.php/admin/?m=index&a=setflash" target="mainFrame"'>返回列表</a></p>
+	<p></p>
+	<center>
+	<form action='/index.php/admin/?m=index&a=doupdateimg' method='post' enctype="multipart/form-data" id="form1">
+		<input type='hidden' name='id'  value="{$imgs.id}">
+		<table width="50%" border="0" cellspacing="0" cellpadding="0" class="tableborder">
+		  <tr>
+			<td>链接:</td>
+			<td><input type='text' name='link' width=200 value="{$imgs.link}">可以不填</td>
+		  </tr>
+		  <tr>
+		  <tr>
+			<td>原图片:</td>
+			<td><img src='{$imgs.url}'  width=180 height=45></td>
+		  </tr>
+			<td>新图片(可以不更换):</td>
+			<td><input type='file' name='image'> 图片大小 (1290 X 3880)</td>
+		  </tr>
+		  <tr>
+			<td colspan=2><center><input type='submit' value='保存'></td>
+		  </tr>
+		</table>
+	</form>
+	 <p><span style="color:#F00">{$result}</span></p>
+</body>
+</html>

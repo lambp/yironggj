@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link href="/css/admin_add.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"    src="/js/jquery-1.2.6.js"></script>
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script> 
+</head>
+<body>
+<script>
+        function checkForm(){
+			if( '-1' == $.trim($('#typeid').val())){
+                alert('请选择新闻动态类别');
+                return false;
+            }
+			if( '' == $.trim($('#name').val())){
+                alert('文章标题不能为空');
+                return false;
+            }
+		
+			if( '' == $.trim($('#msg').val())){
+                alert('文章内容不能为空');
+                return false;
+            }
+            //可以在此添加其它判断
+        }
+</script>
+    <p>这里是<span style="color:#F00">添加新闻动态</span> <a href="/index.php/admin/?m=news&a=index" target="mainFrame"'>返回列表</a></p>
+	<p></p>
+	<center>
+	<form action='/index.php/admin/?m=news&a=doaddnews' method='post' onsubmit='return checkForm()' enctype="multipart/form-data" id="form1">
+		<table width="80%" border="0" cellspacing="0" cellpadding="0" class="tableborder">
+		  <tr>
+			<td colspan=2><center>添加新闻动态</td>
+		  </tr>
+		  <tr>
+			<td>新闻动态类别:</td>
+			<td><select id='typeid' name='typeid'>
+				<option value='-1' selected>请选择新闻动态类别</option>
+				<foreach name='typelist' item='list'>
+					<option value='{$list.id}' >{$list.name}</option>
+				</foreach>
+				</select>
+		  </tr>
+		  <tr>
+			<td>文章标题:</td>
+			<td><input type='text' id='name' name='name' width=200 >*</td>
+		  </tr>
+		  <tr>
+			<td>文章内容:</td>
+			<td><textarea id='msg' name='msg' rows=10 cols=80></textarea><script type="text/javascript">var editor = CKEDITOR.replace( 'msg',{language:'zh-cn'});</script></td>
+		  </tr>
+		  <tr>
+			<td colspan=2><center><input type='submit' value='保存'></td>
+		  </tr>
+		</table>
+	</form>
+	<p><span style="color:#F00">{$result}</span></p>
+</body>
+</html>

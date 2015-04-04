@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+#nextInfo a{color:#646464; text-decoration:none;}
+#nextInfo a:hover{color:#333333; text-decoration:underline;}
+
+
+#preInfo a{color:#646464; text-decoration:none;}
+#preInfo a:hover{color:#333333; text-decoration:underline;}
+
+body {margin:0; padding:0; font-size:12px; background:none;}
+div,input,span,p,li,a{ font-family: 微软雅黑,Arial, Helvetica,sans-serif;}
+
+a{blr:expression(this.onFocus=this.blur());outline:none;}
+.clearfix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+#box_news { width:100%; height:auto; background:url(/resources/img/news_txt_01.gif) center 100px no-repeat; padding-top:290px}
+#box_news_list { width:1200px; height:260px; margin:0 auto; background:url(/resources/img/news_line.gif) left center repeat-x;}
+
+.news_txt { width:100%; height:160px; background:url(/resources/img/news_txt_02.png) center 100px no-repeat; padding-top:100px;}
+
+.news_detail { width:100%; height:1100px; position:absolute; left:-100%; top:0px; z-index:999; background:#FFF;}
+a.close_news { width:95px; height:50px; position:absolute; right:0px; top:40%; background:url(/images/close_news.gif) no-repeat; text-indent:-200px; overflow:hidden; text-decoration:none;}
+a.close_news:hover { background:url(/images/close_news.gif) 0px -50px no-repeat;}
+
+.news_iframe { width:1000px; height:600px; margin:0 auto; padding-top:150px;}
+#box_news_list li.rim1 { left:0px; top:0px; padding-bottom:5px; background:url(/resources/img/news_ico_01.png) center bottom no-repeat;}
+#box_news_list li.rim2 { left:140px; top:155px; padding-top:5px;  background:url(/resources/img/news_ico_02.png) center top no-repeat;}
+#box_news_list li.rim2 .main {top:5px;}
+#box_news_list li.rim3 { left:280px; top:0px;  padding-bottom:5px; background:url(/resources/img/news_ico_01.png) center bottom no-repeat;}
+#box_news_list li.rim4 { left:420px; top:155px; padding-top:5px;  background:url(/resources/img/news_ico_02.png) center top no-repeat;}
+#box_news_list li.rim4 .main {top:5px;}
+#box_news_list li.rim5 { left:560px; top:0px;  padding-bottom:5px; background:url(/resources/img/news_ico_01.png) center bottom no-repeat;}
+#box_news_list li.rim6 { left:700px; top:155px; padding-top:5px;  background:url(/resources/img/news_ico_02.png) center top no-repeat;}
+#box_news_list li.rim6 .main {top:5px; left:-167px !important;}
+#box_news_list li.rim7 { left:840px; top:0px;  padding-bottom:5px; background:url(/resources/img/news_ico_01.png) center bottom no-repeat;}
+#box_news_list li.rim7 .main {left:-167px !important;}
+
+.next { display:block; width:80px; height:80px; background:url(/resources/img/page_btu.png) -80px 0px no-repeat; position:absolute; right:-140px; top:90px; z-index:99; text-indent:-200px; overflow:hidden;}
+.prev { display:block; width:80px; height:80px; background:url(/resources/img/page_btu.png) 0px 0px no-repeat; position:absolute; left:-140px; top:90px; z-index:99; text-indent:-200px; overflow:hidden;}
+a.next:hover { background:url(/resources/img/page_btu.png) -80px -80px no-repeat;}
+a.prev:hover { background:url(/resources/img/page_btu.png) 0px -80px no-repeat;}
+
+#box_news_detail { width:100%;}
+
+#box_loading { width:200px; height:40px; position:absolute; left:50%; top:50%; margin:-20px 0px 0px -100px; background:url(/images/loading.gif) center 30px no-repeat; text-align:center; font-size:12px; line-height:30px; color:#900;}
+
+.back_msg { width:100%; height:30px; padding-top:50px;}
+.back_msg a { display:block; width:120px; height:30px; text-align:center; margin:0 auto; line-height:30px; color:#fff; font-size:12px; background:#ab5210; text-decoration:none;}
+.back_msg a:hover { background:#d06110; text-decoration:none;}
+
+#box_market { width:920px; margin:0 auto; padding-top:20px;}
+
+
+#box_group { width:100%; height:auto; background:url(/resources/img/market_txt_01.png) center 100px no-repeat; padding-top:290px}
+.box_group_text { width:100%; height:160px; background:url(/resources/img/market_txt_02.png) center 100px no-repeat; padding-top:100px;}
+
+#box_group_list { width:1200px; height:260px; margin:0 auto;}
+#box_group_list li.rim7 .main {left:-167px !important;}

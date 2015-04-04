@@ -1,0 +1,96 @@
+#right li{
+	position:relative;
+	padding:0px 0px 0px 20px; 
+	float:left;
+	list-style-position:outside;
+	}
+
+.shortcut{
+	height:415px;
+	z-index:3;
+	left:0px;
+	background:#8A8A8A;
+	border: solid 1px white;
+	overflow:hidden;
+}
+.on{
+	width:495px;
+}
+.nor{
+	width:121px;
+}
+.off{
+	width:50px;
+	filter:alpha(opacity=60);
+	opacity: 0.6;
+}
+.shortcut img{
+	cursor:pointer;
+	height:415px;
+}
+
+#show{
+	height:417px;
+	width:880px;
+	z-index:3;
+	position:absolute;
+	top:80px;
+	left:105px;
+}
+#top_img{
+
+    height:81px;
+    width:870px;
+    z-index:3;
+    position:absolute;
+    top:0px;
+    left:105px;
+    background-image:url("/images/right_btn.png");
+}
+.mask{
+	height:120%;
+	width:100%;
+	z-index:9;
+	background:#000000;
+	position:absolute;
+	top:0px;
+	left:0px;
+	filter:alpha(opacity=80);
+	opacity: 0.8;
+}
+#innerDiv{
+	position:absolute;
+	z-index:10;
+}
+#closer{
+	position:absolute;
+	width:20px;
+	height:20px;
+	background:#FFFFFF;	
+	z-index:12;
+}
+#innerDiv img{
+	position:absolute;
+	z-index:11;
+	max-width:800px;
+	max-height:600px;
+	width: expression(this.width > 800 && this.width / 800 >= this.height / 600 ? 800 : true);    
+	height: expression(this.height > 600 && this.width / 800 < this.height / 600 ? 600 : true);   
+}
+
+.sb{
+	height:424px;
+	width:695px;
+}
+.sb img{
+	height:424px;
+}
+.ss{
+	height:136px
+	width:176px;
+	filter:alpha(opacity=60);
+	opacity: 0.6;
+}
+.ss img{
+	height:136px;
+}

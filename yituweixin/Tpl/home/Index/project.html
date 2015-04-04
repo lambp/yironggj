@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{$index_msg.title}</title>
+
+    <link href="/resources/css/page_index.min.css" rel="stylesheet" type="text/css" />
+    <link href="/resources/css/global.css" rel="stylesheet" type="text/css" />
+    <link href="/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/css/case.css" rel="stylesheet" type="text/css" />
+    <link href="/css/text.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body id="index">
+
+<div id="box_root" class="pageWidth">
+    <!-- 头信息 -->
+	<include file="Public:header" />
+    <!-- 一列栏目开始 -->
+    <div id="box_main">
+        <div id="context">
+            <div id="top">
+                <div id="left">
+                    <div class="right_bg" onmouseout="fun1(document.getElementById('show'))">
+
+                                <div class="tx_title2" style="font-family:黑体">案列展示</div>
+                        <div class="tx_line"></div>
+                        <foreach name='project_list' item='list'>
+                            <div class="tx_li" onmouseover="fun2(document.getElementById('image_{$list.id}'))">{$list.title} <span> > </span></div>
+                            <div class="tx_line2"></div>
+                        </foreach>
+
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="top_img"> </div>
+                    <div id="show" onmouseout="fun1(this)">
+
+                        <foreach name='project_list' item='list'>
+                            <li id="image_{$list.id}" onmouseover="fun2(this)">
+                                <div class="shortcut nor"> <a href="#"><img src="/images/products/m_{$list.image}"  border="0"/></a> </div>
+                            </li>
+                        </foreach>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="mask hidden"> </div>
+    <script type="text/javascript">
+        function fun2(obj)
+        {
+
+            var show=document.getElementById('show');
+
+            var locLi=show.getElementsByTagName('li');
+            for(var i=0;i<locLi.length;i++){
+                var locDiv=locLi[i].getElementsByTagName('Div');
+                if(locLi[i]==obj){
+                    locDiv[0].className='shortcut on';
+                }
+                else{
+                    locDiv[0].className='shortcut off';
+                }
+            }
+        }
+
+        function fun1(obj)
+        {
+            var show=document.getElementById('show');
+
+            var locDiv=show.getElementsByTagName('div');
+            for(var i=0;i<locDiv.length;i++){
+                locDiv[i].className='shortcut nor';
+            }
+        }
+    </script>
+    <script>
+        window.onload=function(){
+            var menu=document.getElementById('menu');
+
+            var locLi=menu.getElementsByTagName('li');
+            var locDiv=menu.getElementsByTagName('div');
+            for(var i=0;i<locLi.length;i++){
+                locLi[i].onmouseover=function(){
+                    displayDiv(this,'over');
+                    //alert(this);
+                }
+                locLi[i].onmouseout=function(){
+                    displayDiv(this,'out');
+                }
+            }
+
+        }
+
+
+    </script>
+    </div>
+    <!-- 一页脚开始 -->
+	<include file="Public:footer" />
+
+</div>
+</body></html>

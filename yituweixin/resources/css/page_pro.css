@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {margin:0; padding:0; font-size:12px; background:#f7f7ef;}
+div,input,span,p,li,a{ font-family: 微软雅黑,Arial, Helvetica,sans-serif;}
+
+a{blr:expression(this.onFocus=this.blur());outline:none;}
+.clearfix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+#box_main { width:1200px; height:auto; margin:0 auto; padding:95px 0px 30px;}
+#box_left { width:1200px; height:54px;}
+a.back_pro { display:block; width:100px; height:54px; background:#e2c142; color:#FFF; text-decoration:none; text-align:center; line-height:54px; position:absolute; right:0px;top:
+0px;}
+a.back_pro:hover { background:#ce6907; color:#fff; text-decoration:none;}
+.containerContent { width:100%; height:54px; position:relative;}
+.pageJump .number .disabled{ display:none;}
+#box_right { width:100%; height:auto; padding-top:30px;}
+body#shop_list #box_right { width:100%; height:auto; padding-top:0px;}
+
+#box_footer { background:#FFF; width:100%; height:30px; position:fixed; left:0px; bottom:0px; z-index:99; overflow:hidden;}
+
+li.content .pic-module .pic A:hover {filter:Alpha(Opacity=70); opacity:0.7;}
+
+#box_footer .foot_rim { width:1200px; height:30px; margin:0 auto; color:#666; text-align:center; font-size:11px; line-height:30px;}
+#box_footer .foot_rim a { color:#666; text-decoration:underline;}
+#box_footer .foot_rim a:hover { color:#f00; text-decoration:none;}
+
+
+.skimpro p { display:block; width:50px !important; height:120px;position:fixed; top:50%; margin-top:-60px; z-index:99;}
+.skimpro p span{ display:none !important;}
+.skimpro p.next { right:0px;}
+.skimpro p.next a { display:block; width:50px; height:120px;background:url(/images/pro_page_ico.gif) -50px 0px no-repeat; text-indent:-1000px; overflow:hidden; text-decoration:none;}
+.skimpro p.next a:hover { background:url(/images/pro_page_ico.gif) -50px -120px no-repeat;}
+.skimpro p.pre { left:0px;}
+.skimpro p.pre a { display:block; width:50px; height:120px;background:url(/images/pro_page_ico.gif) 0px 0px no-repeat; text-indent:-1000px; overflow:hidden; text-decoration:none;}
+.skimpro p.pre a:hover { background:url(/images/pro_page_ico.gif) 0px -120px no-repeat;}

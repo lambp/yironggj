@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>首页轮播图</title>
+<link href="/css/admin_add.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"    src="/js/jquery-1.2.6.js"></script>
+</head>
+
+<body>
+    <p>这里是<span style="color:#F00">轮播图管理</span> <a href='/index.php/admin/?m=index&a=addimg'>添加新图</a></p>
+	<p></p>
+	<center>
+		<table width="80%" border="0"  cellspacing="0" cellpadding="0" class="tableborder">
+		  <tr>
+			<td>ID</td>
+			<td>链接</td>
+			<td>图片</td>
+			<td>编辑</td>
+		  </tr>
+		  <foreach name='headerimg' item='list'>
+		  <tr>
+			<td>{$list.id}</td>
+			<td>{$list.link}</td>
+			<td><img src='{$list.url}' width=200,height='60'></td>
+			<td><a href='/index.php/admin/?m=index&a=updateimg&id={$list.id}' >编辑</a> | 
+			<a href='/index.php/admin/?m=index&a=dodeleteimg&id={$list.id}' >删除</a></td>
+		  </tr>
+		  </foreach>
+		</table>
+</body>
+</html>

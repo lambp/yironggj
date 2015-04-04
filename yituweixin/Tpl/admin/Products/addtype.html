@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>首页轮播图</title>
+<link href="/css/admin_add.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"    src="/js/jquery-1.2.6.js"></script>
+</head>
+
+<body>
+    <p>这里是<span style="color:#F00">新增分类</span> </p>
+	<center>
+	<a href='/index.php/admin/?m=products&a=types'>返回分类</a>
+	<center><form action="/index.php/admin/?m=products&a=doaddtype" method="POST">
+				<p></p>
+				<p>分类名称:<input type='text' name='typename' size=20></p>
+				<p></p>
+			   <p>所谓分类：<select id='typeid' name='typeid'>
+				<option value='0' selected>设为一级分类</option>
+				<foreach name='typelist' item='list'>
+					<option value='{$list.id}' >{$list.title}</option>
+				</foreach>
+				</select>
+				</p>
+				<p><input type="submit" value="保存" />
+			</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<link href="/css/admin_add.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"    src="/js/jquery-1.2.6.js"></script>
+</head>
+
+<body>
+    <p>这里是<span style="color:#F00">新增分类</span> </p>
+	<center>
+	<p><a href='/index.php/admin/?m=products&a=types'>返回分类</a></p>
+	<center><form action="/index.php/admin/?m=products&a=doupdatetype&id={$oldrs.id}" method="POST">
+				<p>所谓分类：<select id='toptypeid' name='toptypeid'>
+			    <if condition="$oldrs.preid eq 0">
+					<option value='0'  selected>顶级分类</option>
+				<else/>
+					<option value='0'  >设为顶级分类</option>
+				</if>
+				<foreach name='typelist' item='list'>
+					<if condition="$list.id eq $oldrs.preid ">
+						<option value='{$list.id}' selected>{$list.title}</option>
+					<else/>
+						<option value='{$list.id}' >{$list.title}</option>
+					</if>
+				</foreach>
+				</select>
+				</p>
+				<p></p>
+				<p>分类名称:<input type='text' name='typename' value='{$oldrs.title}' size=15></p>
+				<p></p>
+			    
+				<p><input type="submit" value="保存" />
+			</form>
+</body>
+</html>

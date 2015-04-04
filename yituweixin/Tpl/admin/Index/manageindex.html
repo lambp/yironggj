@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link href="/css/admin_add.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"    src="/js/jquery-1.2.6.js"></script>
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script> 
+</head>
+<body>
+
+    <p>这里是<span style="color:#F00">网站设置</span></p>
+	<p></p>
+	<center>
+	<form action='/index.php/admin/?m=index&a=doupdateindex' method='post' onsubmit='return checkForm()' enctype="multipart/form-data" id="form1">
+		<table width="80%" border="0" cellspacing="0" cellpadding="0" class="tableborder">
+			<tr>
+			<td colspan=2><center>网站设置<input type='hidden' name='id' value='{$initmsg.id}'></td>
+		  </tr>
+		  <tr>
+			<td>网站域名</td>
+			<td><input type='text' class="txt_01" id='indexurl' name='indexurl' value='{$initmsg.indexurl}' width='400px'/>*</td>
+		  </tr>
+		  <tr>
+			<td>网站名称</td>
+			<td><input type='text' class="txt_01" id='title' name='title' value='{$initmsg.title}'  >*</td>
+		  </tr>
+		  <tr>
+			<td>公司名称:</td>
+			<td><input type='text' class="txt_01" id='company_name' name='company_name' value='{$initmsg.company_name}' >*</td>
+		  </tr>
+		    <tr>
+			<td>公司地址:</td>
+			<td><input type='text' class="txt_01" id='company_addr' name='company_addr' value='{$initmsg.company_addr}' >*</td>
+		  </tr>
+		   <tr>
+			<td>联系电话</td>
+			<td><input type='text' class="txt_01" id='company_tel' name='company_tel' value='{$initmsg.company_tel}' >*</td>
+		  </tr>
+		   <tr>
+			<td>联系QQ:</td>
+			<td><input type='text' class="txt_01" id='company_qq' name='company_qq' value='{$initmsg.company_qq}' >*</td>
+		  </tr>
+		  <tr>
+			<td>网站关键词(SEO):</td>
+			<td><input type='text' id='keywords' class="txt_01" value='{$initmsg.keywords}' name='keywords' >*</td>
+		  </tr>
+		  <tr>
+			<td>网站介绍(SEO):</td>
+			<td><input type='text' id='company_msg' class="txt_01" name='company_msg' value='{$initmsg.company_msg}'  >*</td>
+		  </tr>
+		  <tr>
+			<td>联系方式:</td>
+			<td><textarea id='msg' name='msg'  rows=10 cols=80>{$initmsg.lianxi_msg}</textarea>
+			<script type="text/javascript">var editor = CKEDITOR.replace( 'msg',{language:'zh-cn'});</script></td>
+		  </tr>
+		  <tr>
+			<td>网站版权:</td>
+			<td><input type='text' id='copyright' class="txt_01" name='copyright' value='{$initmsg.copyright}' >*</td>
+		  </tr>
+		  <tr>
+			<td colspan=2><center><input type='submit' value='保存'></td>
+		  </tr>
+		</table>
+	</form>
+	<p><span style="color:#F00">{$result}</span></p>
+</body>
+</html>

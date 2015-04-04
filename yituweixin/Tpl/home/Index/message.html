@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link href="/favicon.ico" rel="shortcut icon" type="shortcut icon" />
+    <link href="/resources/css/lib.min.css" rel="stylesheet" type="text/css" />
+    <link href="/resources/css/page_messages_list.min.css" rel="stylesheet" type="text/css" />
+    <meta content="no-cache" http-equiv="Pragma" />
+    <script type="text/javascript" src="/resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib.min.js"></script>
+    <link href="/resources/css/pub_page.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body  id="messages_list">
+<div class="pageWidth" id="box_root">
+    <!-- 一列版式开始 -->
+    <div id="box_main">
+        <!-- 主体内容开始 -->
+        <div class="columnSpace"  name="自定义发表留言"><!-- 装饰器样式开始 -->
+            <div class="border_00">
+                <div class="border_00-topr">
+                    <div class="border_00-topl">
+                    </div>
+                </div>
+                <div class="border_00-mid">
+                    <div class="borderContent"><div id="FrontMessages_customizeEmit01-1392106412942" class="FrontMessages_customizeEmit01-d1_c1"><div class="comptitle_00"><strong class="titlestyle_00"><img src="/resources/img/msg_title.png" /></strong></div>
+                        <iframe name="myframe" style="display:none" src="#"></iframe>
+                        <a name="messageLink" class="messageLink">&nbsp;</a>
+                        <div class="FrontMessages_customizeEmit01-d1_c1">
+                            <form id="FrontMessages_customizeEmit01-1392106412942_referForm" action="/" method="post" name="FrontMessages_customizeEmit01-1392106412942_referForm">
+                                <input type="hidden" id="messagesCategoryId" name="messagesCategoryId" value="e50e2099-a211-40ce-8997-3c0d76883a41" />
+                                <input type="hidden" id="succesUrl" name="succesUrl" value="/messages_success.html" />
+                                <input type="hidden" id="token" name="token" value="ae922a3e1ddce3c859b7265d065fa56b" />
+                                <input type="hidden" name="orignal_url" id="FrontMessages_customizeEmit01-1392106412942_currentPage" value=""/>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr class="name">
+                                        <th>
+                                            留言人：</th>
+                                        <td><input type="hidden" id="isDisplayAuthor" value="0" />
+                                            <div class="text-oper">
+                                                <span class="fontnone">&nbsp;</span>
+                                                <input class="input" type="text" id="author" name="author" value=""    maxlength="20"
+                                                       onfocus="FrontMessages_customizeEmit01.showinfo('FrontMessages_customizeEmit01-1392106412942_author')"
+                                                       onblur="FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1392106412942'+'_referForm'),'author','FrontMessages_customizeEmit01-1392106412942','null','null')" />
+                                            </div>
+                                            <div class="text-tip">
+                      <span class="tip-default"  id="FrontMessages_customizeEmit01-1392106412942_infoauthor">
+            				小于等于20个字符（包括A-Z、a-z、0-9、汉字、不含特殊字符）</span>
+            		<span class="tip-remind" style="display:none;"   id="FrontMessages_customizeEmit01-1392106412942_infoauthor_black">
+            				小于等于20个字符（包括A-Z、a-z、0-9、汉字、不含特殊字符）</span>
+            		<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-1392106412942_errauthor">
+            			留言人应包括A-Z、a-z、0-9、汉字、不含特殊字符，请重新填写</span>
+            		<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-1392106412942_noauthor">
+            			留言人为必填项，请填写</span>
+                                            </div></td>
+                                    </tr>
+                                    <tr class="mail">
+                                        <th>您的邮箱：</th>
+                                        <td><input type="hidden" id="isDisplayMail" value="0" />
+                                            <div class="text-oper">
+                                                <span class="fontnone">&nbsp;</span>
+                                                <input class="input" type="text" id="mail" name="mail" value=""
+                                                       maxlength="50" onfocus="FrontMessages_customizeEmit01.showinfo('FrontMessages_customizeEmit01-1392106412942_mail')"
+                                                       onblur="FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1392106412942'+'_referForm'),'mail','FrontMessages_customizeEmit01-1392106412942','null','null')" />
+                                            </div>
+                                            <div class="text-tip">
+                        <span class="tip-default"  id="FrontMessages_customizeEmit01-1392106412942_infomail">
+            				示例：example@mail.com</span>
+            			<span class="tip-remind" style="display:none;"   id="FrontMessages_customizeEmit01-1392106412942_infomail_black">
+            				示例：example@mail.com</span>
+            			<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-1392106412942_errmail">
+            				留言人邮箱应含有@和.字符、请重新填写</span>
+            			<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-1392106412942_nomail">
+            				留言人邮箱为必填项，请填写</span>
+                                            </div></td>
+                                    </tr>
+                                    <tr class="info">
+                                        <th valign="top">留言内容：</th>
+                                        <td><input type="hidden" name="maxContent" id="maxContent" value="500" />
+                                            <div class="text-oper"><span class="fontred">*</span>
+                                                <textarea class="textarea input-gray"  name="content"  onfocus="FrontMessages_customizeEmit01.showinfo('FrontMessages_customizeEmit01-1392106412942_content')" onblur="FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1392106412942'+'_referForm'),'content','FrontMessages_customizeEmit01-1392106412942','null','null')" onkeyup="FrontMessages_customizeEmit01.dynamicNum('FrontMessages_customizeEmit01-1392106412942_cpForm',this,'null')"  ></textarea>
+            				<span class="tips">
+            					已输入字符：<span id="dynamicNum">0</span>
+            					字<span class="tips">
+            					</span>
+            				</span>
+                                            </div>
+                                            <div class="text-tip">
+                          <span class="tip-default"   id="FrontMessages_customizeEmit01-1392106412942_infocontent">
+                		  	小于等于500字符</span>
+                		  <span class="tip-remind"  style="display:none;"  id="FrontMessages_customizeEmit01-1392106412942_infocontent_black">
+                		  	小于等于500字符</span>
+                		  <span class="tip-error"  style="display:none;"    id="FrontMessages_customizeEmit01-1392106412942_nocontent">
+                		  	留言内容为必填项，请填写</span>
+                		  <span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-1392106412942_errcontent">
+                			留言内容应小于等于500字符，请重新填写</span>
+                                            </div></td>
+                                    </tr>
+                                    <tr class="verify">
+                                        <th>验证码：</th>
+                                        <td><div class="text-oper"><span class="fontred">*</span>
+                                            <input class="input input-gray" type="text" id="verifyCode" name="verifyCode"
+                                                   value="" maxlength="25"
+                                                   onfocus="FrontMessages_customizeEmit01.showinfo('FrontMessages_customizeEmit01-1392106412942_verifyCode');FrontMessages_customizeEmit01.getajaxverifyCodeforonblur();"
+                                                   onblur="FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1392106412942'+'_referForm'),'verifyCode','FrontMessages_customizeEmit01-1392106412942','null','null')" />
+                                           <input type="hidden" id="ajaxverifyCode" name="ajaxverifyCode" value="" />
+                                            <input type="hidden" id="FrontMessages_customizeEmit01-1392106412942_chkcode" name="FrontMessages_customizeEmit01-1392106412942_chkcode" value="" />
+    				<span onclick="document.getElementById('FrontMessages_customizeEmit01-1392106412942_vcode').src+=1;" ><a href="javaScript:void(0);">
+                        看不清楚？换张图片</a>
+    				</span>
+                                        </div>
+                                            <div class="text-tip">
+    		          <span class="tip-error"   style="display:none;"    id="FrontMessages_customizeEmit01-1392106412942_noverifyCode">
+    						验证码为必填项，请填写</span>
+    				 <span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-1392106412942_pastverifyCode">
+    					验证码已过期，请重新输入</span>
+    				  <span class="tip-error" style="display:none;"  id="FrontMessages_customizeEmit01-1392106412942_errverifyCode">
+    					验证码输入错误，请重新输入</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="button-position">
+                                        <th>&nbsp;
+                                            <input type="hidden" id="compId" name="compId" value="FrontMessages_customizeEmit01-1392106412942" />
+                                            <input type="hidden" id="FrontMessages_customizeEmit01-1392106412942_newsId" name="FrontMessages_customizeEmit01-1392106412942_newsId" value="" />
+                                            <input type="hidden" id="FrontMessages_customizeEmit01-1392106412942_productId" name="FrontMessages_customizeEmit01-1392106412942_productId" value="" />
+                                            <input type="hidden" id="FrontMessages_customizeEmit01-1392106412942_downloadsId" name="FrontMessages_customizeEmit01-1392106412942_downloadsId" value="" />
+                                            <input type="hidden" id="FrontMessages_customizeEmit01-1392106412942_onlineId" name="FrontMessages_customizeEmit01-1392106412942_onlineId" value="" />
+                                            <input type="hidden" id="FrontMessages_customizeEmit01-1392106412942_membersarticleId" name="FrontMessages_customizeEmit01-1392106412942_membersarticleId" value="" />
+                                        </th>
+                                        <td><span class="fontnone">&nbsp;</span>
+                                            <input  id="FrontMessages_customizeEmit01-1392106412942_submit" title="发表留言"  class="btn btn-com-01" type="button" value="发表留言" onclick="return FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1392106412942'+'_referForm'),'all','FrontMessages_customizeEmit01-1392106412942')" />
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+
+                    </div>
+                        <div class="clearBoth"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 装饰器样式结束 -->
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+
